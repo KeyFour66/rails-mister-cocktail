@@ -1,0 +1,21 @@
+
+<h1>Cocktail Details</h1>
+
+<h2><%= @cocktail.name %></h2>
+
+<ul>
+  <% @doses.each do |dose| %>
+
+    <li><%=  dose.description %> , <%= dose.ingredient.name %></li>
+  <% end %>
+</ul>
+<%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail) , :class => "btn btn-primary" %>
+
+<% console %>
+
+
+<hr>
+<%= link_to cocktails_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>
+
